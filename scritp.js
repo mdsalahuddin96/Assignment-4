@@ -63,30 +63,22 @@ getElement('three-btn').addEventListener('click',(event)=>{
 // All Job container;
 
 allJobContainer.addEventListener('click',(event)=>{
-    if(event.target.id=="interview-btn"){
-        const left=event.target.closest(".Card").children[0];
-        const companyName=getText(left,'.companyName');
-        const position=getText(left,'.position');
-        const location=getText(left,'.location');
-        const type=getText(left,'.type');
-        const salary=getText(left,'.salary');
-        const badge=getText(left,'.badge');
-        const description=getText(left,'.description');
-        const cardInfo={
-            companyName,
-            position,
-            location,
-            type,
-            salary,
-            badge,
-            description
+    if(event.target.id=='interview-btn'){
+        const cardInfo=getCardInfo(event)
+        const exist=interviewList.find((item)=>item.companyName==cardInfo.companyName);
+        if(!exist){
+            interviewList.push(cardInfo);
         }
-        interviewList.push(cardInfo);
+        else{
+            alert('already selected!')
+        }
+        
         const interviewTotalCount=getElement('interviewCount');
         interviewTotalCount.innerText=interviewList.length;
-        document.getElementById('interview-card-container').innerHTML=parseHTML(interviewList);
-        
-        document.getElementById('interview-card-container').classList.remove('hidden')
+        interviewSection.innerHTML="";
+        for(const interview of interviewList){
+            interviewSection.insertAdjacentHTML('beforeend',parseHTML(interview))
+        }
     }
     if(event.target.className=='delete'){
        event.target.closest('.Card').remove()
@@ -98,3 +90,4 @@ allJobContainer.addEventListener('click',(event)=>{
        }
     }
 })
+console.log(interviewList.length);
