@@ -52,69 +52,76 @@
 
          <!-- Three button section -->
           <section class="max-w-6xl mx-auto my-10">
-            <div>
+            <div id="three-btn">
                 <button id="allBtn" class="btn btn-primary px-8">All</button>
-                <button id="interviewBtn" class="btn btn-soft btn-success px-8">Interview</button>
-                <button id="rejectBtn" class="btn btn-soft btn-error px-8">Rejected</button>
+                <button id="interviewBtn" class="btn btn-soft px-8">Interview</button>
+                <button id="rejectBtn" class="btn btn-soft px-8">Rejected</button>
             </div>
           </section>
+
           <!--All Job Card Section -->
-        <section id="card-container" class="max-w-6xl border-2 border-amber-600 mx-auto my-10">
+        <section id="all-job-container" class="max-w-6xl border-2 border-amber-600 mx-auto my-10">
             <!-- card-1 -->
-            <div class="flex justify-between p-5">
+            <div class="Card flex justify-between p-5">
                 <!-- card left side element -->
-                <div class="lef space-y-3">
+                <div class="left space-y-3">
                     <div>
-                        <h2 class="card-title text-2xl font-bold">Mobile First Corp</h2>
-                        <p>React Native Developer</p>
+                        <h2 class="companyName text-2xl font-bold">Mobile First Corp</h2>
+                        <p class="position">React Native Developer</p>
                     </div>
                     <div class="flex gap-2">
-                        <p>Remote</p>
+                        <p class="location">Remote</p>
                         <p>.</p>
-                        <p>Full-time</p>
+                        <p class="type">Full-time</p>
                         <p>.</p>
-                        <p>$130,000-$175,000</p>
+                        <p class="salary">$130,000-$175,000</p>
                     </div>
                     <div class="badge badge-soft badge-secondary">NOT APPLIED</div>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="card-actions">
-                        <button class="btn btn-outline btn-success">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id='rejected-btn' class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
                 <!-- card right side delete element -->
-                <div id="delete-btn" class="right">
-                    <img src="./Vector.png">
+                <div class="right delete border border-amber-700 w-10 h-10 flex items-center justify-center">
+                    <img class="delete" src="./Vector.png">
                 </div>
             </div>
             <!-- card-2 -->
-            <div class="flex justify-between p-5">
+             <div class="Card flex justify-between p-5">
                 <!-- card left side element -->
-                <div class="lef space-y-3">
+                <div class="left space-y-3">
                     <div>
-                        <h2 class="card-title text-2xl font-bold">Mobile First Corp</h2>
-                        <p>React Native Developer</p>
+                        <h2 class="companyName text-2xl font-bold">Mobile First Corp</h2>
+                        <p class="position">React Native Developer</p>
                     </div>
                     <div class="flex gap-2">
-                        <p>Remote</p>
+                        <p class="location">Remote</p>
                         <p>.</p>
-                        <p>Full-time</p>
+                        <p class="type">Full-time</p>
                         <p>.</p>
-                        <p>$130,000-$175,000</p>
+                        <p class="salary">$130,000-$175,000</p>
                     </div>
                     <div class="badge badge-soft badge-secondary">NOT APPLIED</div>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="card-actions">
-                        <button class="btn btn-outline btn-success">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button id="interview-btn" class="btn btn-outline btn-success">INTERVIEW</button>
+                        <button id='rejected-btn' class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
                 <!-- card right side delete element -->
-                <div id="delete-btn" class="right">
-                    <img src="./Vector.png">
+                <div class="right delete border border-amber-700 w-10 h-10 flex items-center justify-center">
+                    <img class="delete" src="./Vector.png">
                 </div>
             </div>
         </section>
+
+        <!-- Interview Job section -->
+        <section id="interview-card-container" class="interview-section max-w-6xl border-2 border-amber-600 mx-auto my-10 hidden">
+            <!-- card-1 -->
+        </section>
+
         <!-- No jobs available section -->
         <section id="no-job-section" class="max-w-6xl border-2 border-amber-600 mx-auto my-10 text-center p-28 space-y-3 hidden">
             <i class="fa-solid fa-file text-5xl text-gray-400"></i>
@@ -122,7 +129,8 @@
             <p>Check back soon for new job opportunities</p>
         </section>
     </main>
-    
+    <script src="machine.js"></script>
     <script src="scritp.js"></script>
+    
 </body>
 </html>
