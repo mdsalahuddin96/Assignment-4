@@ -37,7 +37,7 @@ function getCardInfo(event){
 }
 function parseHTML(cardInfo){
     return `
-        <div class="Card flex justify-between p-5">
+        <div class="Card flex justify-between bg-base-100 rounded-md p-5">
             <!-- card left side element -->
             <div class="left space-y-3">
                 <div>
