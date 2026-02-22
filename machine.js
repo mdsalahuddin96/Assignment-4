@@ -59,7 +59,7 @@ function parseHTML(cardInfo){
                 </div>
             </div>
             <!-- card right side delete element -->
-            <div class="right delete border border-amber-700 w-10 h-10 flex items-center justify-center">
+            <div class="right delete border border-gray-400 w-7 h-7 rounded-md flex items-center justify-center">
                 <img class="delete" src="./Vector.png">
             </div>
             </div>
